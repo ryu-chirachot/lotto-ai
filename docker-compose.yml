@@ -1,0 +1,26 @@
+# Local full-stack mode: FastAPI backend + Next.js frontend calling it.
+# (The GitHub Pages build needs no backend; engines run in the browser.)
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      LOTTO_ENABLE_SCHEDULER: "true"
+      LOTTO_CORS_ORIGINS: '["http://localhost:3000"]'
+    volumes:
+      - ./backend/data:/app/data
+
+  frontend:
+    image: node:20-alpine
+    working_dir: /repo/frontend
+    command: sh -c "npm ci && npm run dev -- -H 0.0.0.0"
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    volumes:
+      - ./:/repo
+      - /repo/frontend/node_modules
+    depends_on:
+      - backend
