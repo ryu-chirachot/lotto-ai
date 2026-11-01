@@ -2,7 +2,7 @@
  "lottery": "thai",
  "source": "Government Lottery Office (glo.or.th) public results API",
  "synthetic": false,
- "updated_at": "2026-10-19T08:13:44+00:00",
+ "updated_at": "2026-11-01T16:53:08+00:00",
  "draws": [
   {
    "date": "2010-03-01",
@@ -1988,6 +1988,11 @@
    "date": "2026-10-16",
    "first_prize": "011781",
    "last2": "48"
+  },
+  {
+   "date": "2026-11-01",
+   "first_prize": "423224",
+   "last2": "85"
   }
  ]
 }
