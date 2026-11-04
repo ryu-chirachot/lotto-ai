@@ -2,7 +2,7 @@
  "lottery": "lao",
  "source": "Synthetic uniform-random seed data (not real results)",
  "synthetic": true,
- "updated_at": "2026-11-03T17:58:45+00:00",
+ "updated_at": "2026-11-04T18:09:41+00:00",
  "draws": [
   {
    "date": "2021-01-04",
@@ -3655,6 +3655,10 @@
   {
    "date": "2026-11-02",
    "last2": "43"
+  },
+  {
+   "date": "2026-11-04",
+   "last2": "11"
   }
  ]
 }
